@@ -11,3 +11,22 @@ function getRandomColor(): Rgb {
 }
 
 const colorOne = getRandomColor()
+const colorTwo = getRandomColor()
+console.log(colorOne, colorTwo)
+
+// object literal example
+// alias looks like an Interface but Interfaces don't have =
+type User = {
+    name: string
+    score: number
+}
+
+const userOne: User = {name: "John", score: 100}
+console.log(userOne)
+
+function formatUser(user: User): void{
+    console.log(`${user.name} has a score of ${user.score}`)
+}
+
+formatUser(userOne)
+formatUser({name: "Mary", score: 200})
